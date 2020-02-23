@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- title -->
+    <%- include('./includes/title.ejs') %>
+    <link rel="stylesheet" href="../styles/hardware.css"/>
+</head>
+<body>
+<!--header-->
+<%- include('./includes/header.ejs') %>
+<!--banner-->
+<div class="banner-wrap" style="background-image: url(../static/imgs/hardware/banner.jpg)">
+    <h2>硬件产品</h2>
+</div>
+<!--产品列表-->
+<div class="section-classes">
+    <div class="container">
+        <ul class="all-class">
+            <li class="is-checked"><b>全部</b><span class="badge">17</span></li>
+            <li><b>数据采集设备</b><span class="badge">15</span></li>
+            <li><b>监测传感器</b><span class="badge">2</span></li>
+        </ul>
+
+        <div class="list-wrap">
+            <% for(var i=0, hardwarelistarr=data.hardwarelist; i< hardwarelistarr.length; i++) { %>
+                <div class="list-item">
+                    <a href="">
+                        <img src="../static/imgs/hardware/<%= hardwarelistarr[i].img %>" />
+                        <div class="model"><span><%= hardwarelistarr[i].model %></span></div>
+                        <p><%= hardwarelistarr[i].name %></p>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<%- include('./includes/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "quotes": ["error", "double"]
+  },
+
+  "overrides": [
+    {
+      "files": [""],
+      "excludedFiles": "*.ejs",
+      "rules": {
+        "quotes": ["error", "single"],
+        "eqeqeq": "warn",
+        "strict": "off"
+      }
+    }
+  ]
+}

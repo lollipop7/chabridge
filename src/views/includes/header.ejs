@@ -1,0 +1,59 @@
+<div class="section-header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button id="btn-toggle" type="button" class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="brand-logo" src="../static/imgs/brand-logo.png">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="chabridge-menu">
+        <ul class="lo-menu">
+          <li class="<%= data.filename=='home' ? 'active' : ''%>"><a class="<%= data.filename=='home' ? 'active' : ''%>" href="./home.html">网站首页</a></li>
+
+          <li class="<%= data.filename=='platform' ? 'active' : ''%>"><a class="<%= data.filename=='platform' ? 'active' : ''%>" href="./platform.html">平台服务</a></li>
+
+          <li class="<%= ['solution', 'solution-bridge'].indexOf(data.filename) > -1 ? 'active' : ''%> lo-menu-submenu">
+            <a class="<%= data.filename== 'solution' ? 'active' : ''%>" href="./solution.html">解决方案 <span class="caret"></span></a>
+            <ul class="lo-secmenu">
+              <li><a class="<%= data.filename=='solution-bridge' ? 'active' : ''%>" href="./solution-bridge.html">桥梁</a></li>
+            </ul>
+          </li>
+
+          <li class="<%= ['cases', 'cases-bridge'].indexOf(data.filename) > -1 ? 'active' : ''%> lo-menu-submenu">
+            <a class="<%= data.filename== 'cases' ? 'active' : ''%>" href="./cases.html">相关案例<span class="caret"></span></a>
+            <ul class="lo-secmenu">
+              <li><a class="<%= data.filename=='cases-bridge' ? 'active' : ''%>" href="./cases-bridge.html">桥梁</a></li>
+            </ul>
+          </li>
+          <li class="<%= ['hardware', 'hardware-collect', 'hardware-monitor'].indexOf(data.filename) > -1 ? 'active' : ''%> lo-menu-submenu">
+            <a class="<%= data.filename== 'hardware' ? 'active' : ''%>" href="./hardware.html">硬件产品<span class="caret"></span></a>
+            <ul class="lo-secmenu">
+              <li><a class="<%= data.filename=='hardware-collect' ? 'active' : ''%>" href="./hardware-collect.html">数据采集设备</a></li>
+              <li><a class="<%= data.filename=='hardware-monitor' ? 'active' : ''%>" href="./hardware-monitor.html">监测传感器</a></li>
+            </ul>
+          </li>
+          <li class="<%= ['about-honors', 'about-news', 'about-newsDetails'].indexOf(data.filename) > -1 ? 'active' : ''%> lo-menu-submenu">
+            <a href="javascript:;">关于中桥<span class="caret"></span></a>
+            <ul class="lo-secmenu lo-menu-vertical">
+              <li><a class="<%= data.filename=='about-honors' ? 'active' : ''%>" href="./about-honors.html">荣誉资质</a></li>
+              <li><a class="<%= ['about-news', 'about-newsDetails' ].indexOf(data.filename) > -1 ? 'active' : ''%>" href="./about-news.html">新闻资讯</a></li>
+            </ul>
+          </li>
+          <li class="<%= data.filename=='contact' ? 'active' : ''%> chabridge-tel">
+            <a class="<%= data.filename=='contact' ? 'active' : ''%>" href="./contact.html">
+              <i class="material-icons">phone_iphone</i>
+              <span>0513-89085070</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="drawer-bg"></div>
+    </div>
+
+  </nav>
+</div>

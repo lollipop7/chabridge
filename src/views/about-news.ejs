@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- title -->
+    <%- include('./includes/title.ejs') %>
+</head>
+<body>
+<!--header-->
+<%- include('./includes/header.ejs') %>
+<!--banner-->
+<div class="banner-wrap" style="background-image: url(../static/imgs/about/news/banner.jpg)">
+    <h2>新闻资讯</h2>
+</div>
+<!--新闻列表-->
+<div class="section-news">
+    <div class="container">
+        <div class="list-wrap">
+            <% for( var i=0, newsarr = data.newslist; i< newsarr.length; i++){ %>
+                <div class="list-item">
+                    <a href="about-newsDetails.html?news_id=<%= newsarr[i].news_id %>">
+                        <div class="news-list-pic">
+                            <img src="../static/imgs/about/news/<%= newsarr[i].image %>" alt="">
+                            <div class="bg">
+                                <div class="icon-wrap">
+                                    <i class="material-icons icon-image-preview">link</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-title"><%= newsarr[i].title %>
+                        </div>
+                        <div class="event-deliever"><%= newsarr[i].deliver %></div>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<%- include('./includes/footer.ejs') %>
+</body>
+</html>

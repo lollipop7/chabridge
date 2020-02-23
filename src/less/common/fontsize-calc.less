@@ -1,0 +1,30 @@
+html, body {
+
+}
+:root {
+  font-size: 625%;  /*此处的初始赋值表示1rem=100px*/
+}
+body {
+  font-size: 0.12rem;
+  
+  @media screen and (min-width: @min-screen-width) {
+    font-size: 0.14rem;
+  }
+    
+  @media screen and (min-width: @max-screen-width) {
+    font-size: 0.16rem;
+  }
+}
+h1 {
+  font-size: 0.24rem;
+}
+h2 {
+  font-size: 0.18rem;
+}
+h3 {
+  font-size: 0.16rem;
+}
+h4 {
+  font-size: 0.12rem;
+}
+

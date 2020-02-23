@@ -1,0 +1,20 @@
+{
+  "name": "chabridge",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "lollipop"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+
+  }
+}
