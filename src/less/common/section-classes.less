@@ -1,0 +1,131 @@
+//解决方案 相关案例 硬件中心
+.section-classes {
+  margin: 0.4rem 0;
+  .all-class {
+    display: flex;
+    margin: 0.2rem 0;
+    li {
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      display: inline-block;
+      height: 40px;
+      line-height: 1.5;
+      padding: 0 15px;
+      white-space: nowrap;
+      text-align: center;
+      font-size: @max-fontsize;
+      border-radius: 4px;
+      color: rgba(0, 0, 0, 0.65);
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-color: #d9d9d9;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      &:hover {
+        box-shadow: rgb(202, 202, 202) 3px 3px 10px, rgb(202, 202, 202) -3px -3px 10px;
+        transition: all 0.4s ease;
+      }
+      b {
+        display: inline-block;
+        vertical-align: -webkit-baseline-middle;
+        font-weight: 400;
+      }
+      .badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform-origin: 100% 0%;
+        transform: translate(50%, -50%);
+        min-width: 20px;
+        height: 20px;
+        padding: 0 6px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+        white-space: nowrap;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 0 1px #fff;
+      }
+      &.is-checked {
+        background-color: @theme-color;
+        border-color: @theme-color;
+        color: #fff;
+      }
+    }
+  }
+  .list-wrap {
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:after{
+      content: '';
+      width: 30%; //这个宽度和子元素宽度一致
+      height: 0;
+      display: block;
+    }
+    .list-item {
+      display: flex;
+      padding: 0.2rem;
+      margin-bottom: 0.4rem;
+      flex-direction: column;
+      text-align: left;
+      width: 30%;
+      box-shadow: rgb(202, 202, 202) 3px 3px 10px, rgb(202, 202, 202) -3px -3px 10px;
+      &:hover {
+        transition: all 0.4s ease;
+      }
+      a {
+        display: block;
+        color: #000;
+      }
+      img {
+        margin-bottom: 0.2rem;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+      .name {
+        margin-bottom: 5px;
+        font-size: @max-fontsize;
+        text-indent: 1em;
+        span {
+          padding-bottom: 5px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.65);
+        }
+      }
+      p {
+        font-size: @min-fontsize;
+        color: rgb(128, 128, 128);
+        text-indent: 1em;
+      }
+    }
+  }
+}
+
+@media (max-width: @max-screen-width) {
+  .section-classes {
+    margin: 0.2rem 0;
+    .all-class {
+      li {
+        height: 32px;
+        font-size: @min-fontsize;
+      }
+    }
+    .list-wrap {
+      .list-item {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        img {
+          margin-bottom: 10px;
+          height: 120px; 
+        }
+      }
+    }
+  }
+}

@@ -38,7 +38,23 @@ const fs = require('fs'),
     devJs = join(devSrc, 'js'),
     _ = require('lodash')
 
-const fileArray = ['home', 'platform', 'solution', 'solution-bridge', 'cases', 'cases-bridge', 'hardware', 'hardware-collect', 'hardware-monitor', 'about-honors', 'about-news', 'about-newsDetails', 'contact', '404'];
+const fileArray = [
+    'home', 
+    'platform', 
+    'solution', 
+    'solution-bridge', 
+    'cases', 
+    'cases-bridge', 
+    'hardware', 
+    'hardware-collect', 
+    'hardware-monitor', 
+    'about-honors', 
+    'about-news', 
+    'about-newsDetails', 
+    'contact', 
+    'cloud-register',
+    '404'
+];
 
 //compile ejs to html
 gulp.task('ejscompile', async function() {

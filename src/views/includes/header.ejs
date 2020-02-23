@@ -39,15 +39,26 @@
           </li>
           <li class="<%= ['about-honors', 'about-news', 'about-newsDetails'].indexOf(data.filename) > -1 ? 'active' : ''%> lo-menu-submenu">
             <a href="javascript:;">关于中桥<span class="caret"></span></a>
-            <ul class="lo-secmenu lo-menu-vertical">
+            <ul class="lo-secmenu">
               <li><a class="<%= data.filename=='about-honors' ? 'active' : ''%>" href="./about-honors.html">荣誉资质</a></li>
               <li><a class="<%= ['about-news', 'about-newsDetails' ].indexOf(data.filename) > -1 ? 'active' : ''%>" href="./about-news.html">新闻资讯</a></li>
+            </ul>
+          </li>
+          <li class="<%= ['cloud-inspect', 'cloud-acquisition', 'cloud-register'].indexOf(data.filename) > -1 ? 'active' : ''%> lo-menu-submenu cloud-menu">
+            <a href="javascript:;">
+              <i class="material-icons">wb_cloudy</i>
+              桥好吧<span class="caret"></span>
+            </a>
+            <ul class="lo-secmenu">
+                <li><a class="<%= data.filename=='cloud-inspect' ? 'active' : ''%>" href="http://www.qiaohaoba.net/bridgeMonitoring/#/Login" target="_blank">监测云平台</a></li>
+                <li><a class="<%= data.filename=='cloud-acquisition' ? 'active' : ''%>" href="http://www.qiaohaoba.net/acquisition/#/Login" target="_blank">数据采集系统</a></li>
+                <li><a class="<%= data.filename=='cloud-register' ? 'active' : ''%>" href="./cloud-register.html">云平台注册</a></li>
             </ul>
           </li>
           <li class="<%= data.filename=='contact' ? 'active' : ''%> chabridge-tel">
             <a class="<%= data.filename=='contact' ? 'active' : ''%>" href="./contact.html">
               <i class="material-icons">phone_iphone</i>
-              <span>0513-89085070</span>
+              0513-89085070
             </a>
           </li>
         </ul>

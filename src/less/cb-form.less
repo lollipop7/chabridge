@@ -1,0 +1,104 @@
+@import "./common/variables";
+
+// 表单
+.section-form {
+  padding: 0.6rem 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  .form-box {
+    margin: 0.4rem 0;
+    padding: 0.2rem 0;
+    width: 40%;
+    .title {
+      text-align: center;
+      letter-spacing: 2px;
+      padding: 0.5em 0;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+    }
+    form {
+      padding: 0.2rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      input[type="text"],
+      input[type="password"],
+      button[type="submit"]  {
+        width: 100%;
+        height: 45px;
+        border: 1px solid @theme-color;
+        font-weight: normal;
+        color: #000;
+      }
+      input[type="checkbox"] {
+        opacity: 0;
+        margin: 0;
+        display: none;
+      }
+      button[type="submit"] {
+        color: #fff;
+        background-color: @theme-color;
+      }
+      label {
+        color: #fff;
+        font-style: italic;
+        &.agree-link {
+          position: relative;
+          padding-left: 2em;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 0.14rem;
+          color: #fff;
+          i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            border-collapse: separate;
+            transition: all 0.3s;
+          }
+          a {
+            text-decoration: underline;
+            font-style: italic;
+            cursor: pointer;
+          }
+        }
+      }
+      .agree-link {
+        input:checked + i {
+          background-color: @theme-color;
+          border-color: @theme-color;
+        }
+        input:checked + i:after {
+          opacity: 1;
+        }
+        input + i:after {
+          position: absolute;
+          content: '';
+          opacity: 0;
+          background: url("../static/imgs/tick.png") no-repeat 5px 5px;
+          top: -3px;
+          left: -3px;
+          width: 16px;
+          height: 16px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @min-screen-width) {
+  .section-form {
+    .form-box {
+      margin: 0.3rem auto;
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- title -->
+    <%- include('./includes/title.ejs') %>
+    <link href="https://cdn.bootcss.com/toastr.js/2.1.4/toastr.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/cb-form.css"/>
+</head>
+<body>
+<!--header-->
+<%- include('./includes/header.ejs') %>
+<div class="section-form" style="background-image: url(../static/imgs/cloud/banner.jpg)">
+
+  <div class="container">
+    <div class="form-box">
+      <h1 class="title">cloud register</h1>
+      <!-- data-toggle设置触发器，相当于告诉浏览器你是一个什么组件 -->
+      <form data-toggle="validator">
+        <!-- 把标签和控件放在一个带有 class .form-group 的 <div> 中。这是获取最佳间距所必需的。 -->
+          <div class="form-group">
+            <!-- Bootstrap默认情况下，control-label的文本采用右对齐方式。 -->
+            <label for="username" class="control-label">用户名</label>
+            <!-- 向所有的文本元素 <input>、<textarea> 和 <select> 添加 class ="form-control"  -->
+            <input type="text" class="form-control " id="username" placeholder="请输入用户名"  data-error="用户名必须由6-20位英文字母、数字、下划线组成" required>
+            <!-- 在input域之后添加一个带help-block和with-errors class的div容器,显示错误信息 -->
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group"> 
+            <label for="nickName" class="control-label">昵称</label>
+            <input type="text" class="form-control" id="nickName" placeholder="请输入昵称" maxlength="16">
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd" class="control-label">密码</label>
+            <input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd2" class="control-label">确认密码</label>
+            <input type="password" class="form-control" id="pwd2" placeholder="请再次输入密码">
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile" class="control-label">手机号</label>
+            <input type="text" class="form-control" id="mobile" placeholder="请输入手机号">
+            <div class="help-block with-errors"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="authcode" class="control-label">验证码</label>
+            <input type="text" class="form-control" id="authcode" placeholder="请输入验证码">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="agree" class="control-label agree-link">
+              <input type="checkbox" id="agree"><i></i>我已阅读并同意<a>《桥好吧监测云平台注册协议》</a>
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-lg">注册</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+<%- include('./includes/footer.ejs') %>
+<script src="https://cdn.bootcss.com/toastr.js/2.1.4/toastr.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/language/zh_CN.min.js"></script>
+<script src="../js/cb-form.js"></script> 
+</body>
+</html>

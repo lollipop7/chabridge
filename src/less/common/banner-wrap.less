@@ -7,11 +7,33 @@
 	background-position: center center;
 	padding: 0.6rem 0;
 	letter-spacing: 0.02rem;
+	&>div {
+		width: 60%;
+		margin: 0 auto;
+	}
+	h2 {
+		margin-bottom: 0.25rem;
+	}
+	p {
+		font-size: 0.14rem;
+	}
 }
 
 @media (max-width: @min-screen-width) {
 	.banner-wrap {
 		padding: 0.3rem 0;
-
+		&.banner-platform {
+			height: auto;
+		}
+		&>div {
+			width: 90%;
+			margin: 0 auto;
+		}
+		h2 {
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 0.12rem;
+		}
 	}
 }
