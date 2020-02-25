@@ -3,13 +3,26 @@
 <head>
     <!-- title -->
     <%- include('./includes/title.ejs') %>
+    <link rel="stylesheet" href="../styles/honors.css"/>
 </head>
-<body>
+<body> 
 <!--header-->
 <%- include('./includes/header.ejs') %>
 <!--banner-->
 <div class="banner-wrap" style="background-image: url(../static/imgs/about/honors/banner.jpg)">
     <h2>荣誉资质</h2>
+</div>
+<div class="section-honors">
+    <div class="container">
+        <div class="list-wrap">
+            <% for(var i=0, honorslistarr=data.honorslist; i< honorslistarr.length; i++) { %>
+            <div class="list-item">
+                <img src="../static/imgs/about/honors/<%=honorslistarr[i].img%>" alt="">
+                <div class="name"><%=honorslistarr[i].name%></div>
+            </div>
+            <% } %>
+        </div>
+    </div>
 </div>
 <!--footer-->
 <%- include('./includes/footer.ejs') %>

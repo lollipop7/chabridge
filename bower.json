@@ -15,6 +15,10 @@
     "tests"
   ],
   "devDependencies": {
-
+    "jquery": "^3.4.1",
+    "animate.css": "^3.7.2",
+    "waypoints": "^4.0.1",
+    "normalize.css": "^8.0.1",
+    "toastr": "^2.1.3"
   }
 }

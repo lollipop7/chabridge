@@ -68,6 +68,7 @@ gulp.task('ejscompile', async function() {
                     require(join(devSrc,`datas/newsdata.js`)),
                     require(join(devSrc,`datas/hardwaredata.js`)),
                     require(join(devSrc,`datas/casesdata.js`)),
+                    require(join(devSrc,`datas/honorsdata.js`)),
                     { filename: ejsItem}
                 )
             });

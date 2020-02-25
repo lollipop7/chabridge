@@ -1,0 +1,58 @@
+@import "./common/variables";
+.section-honors {
+  margin: 0.4rem 0;
+  
+  .list-wrap {
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:after{
+      content: '';
+      width: 30%; //这个宽度和子元素宽度一致
+      height: 0;
+      display: block;
+    }
+    .list-item {
+      display: flex;
+      margin-bottom: 0.4rem;
+      flex-direction: column;
+      width: 30%;
+      &:hover {
+        transition: all 0.4s ease;
+      } 
+      
+      img {
+        margin-bottom: 0.2rem;
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+      }
+      .name {
+        margin-bottom: 5px;
+        font-size: @max-fontsize;
+        text-align: center;
+      }
+    }
+  }
+} 
+
+@media (max-width: @max-screen-width) {
+  .section-honors {
+    margin: 0.2rem 0;
+    
+    .list-wrap {
+      .list-item {
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        width: 45%;
+        img {
+          margin-bottom: 10px;
+          height: 120px; 
+        }
+      }
+    }
+  }
+}
