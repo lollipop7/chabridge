@@ -117,11 +117,11 @@ gulp.task('htmlmin', function(done) {
 })
 
 //lib迁移
-gulp.task('copyLib', function(done) {
-    gulp.src(join(__dirname, 'lib/**/*.*'))
-        .pipe(gulp.dest(join(distDir, 'lib/')));
-    done()
-})
+// gulp.task('copyLib', function(done) {
+//     gulp.src(join(__dirname, 'lib/**/*.*'))
+//         .pipe(gulp.dest(join(distDir, 'lib/')));
+//     done()
+// })
 
 //图片压缩任务，支持JPEG、PNG、及GIF文件;
 gulp.task('imgmin', async function() {
@@ -181,13 +181,13 @@ gulp.task('watchs', function() {
     watch(join(devLess, '**/*.less'), gulp.series('lesscompile'));
     watch(join(devJs, '*.js'), gulp.series('jscompile'));
     watch(join(distDir, 'static/imgs'), gulp.series('imgmin'));
-    watch(join(__dirname, 'lib'), gulp.series('copyLib'));
+    // watch(join(__dirname, 'lib'), gulp.series('copyLib'));
 })
 
 //1.自动监测文件变化并刷新浏览器
 
 //初始生成dist目录
-gulp.task('init', gulp.parallel('ejscompile', 'lesscompile', 'jscompile', 'copyLib'));
+gulp.task('init', gulp.parallel('ejscompile', 'lesscompile', 'jscompile'));
 
 //启动任务connect:app服务，并监控变化
 gulp.task('run', gulp.series('init', 'htmlmin', 'refreshed', 'watchs'));
